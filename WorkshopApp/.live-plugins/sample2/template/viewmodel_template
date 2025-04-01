@@ -1,0 +1,14 @@
+package %packageName%
+
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+
+class %viewModelNameCapitalized%ViewModel : ViewModel() {
+    private val _%viewModelName%State = MutableStateFlow(%viewModelNameCapitalized%State())
+    val %viewModelName%State: StateFlow<%viewModelNameCapitalized%State> = _%viewModelName%State
+}
+
+data class %viewModelNameCapitalized%State(
+    val data: Boolean = false, // modify according to your needs
+)

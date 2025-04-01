@@ -1,0 +1,23 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.example.workshop.plugin</id>
+    <name>StandalonePlugin</name>
+    <vendor>Leopold Podmolík</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.example.workshop.plugin.toolWindow.MyToolWindowFactory" id="Standalone Plugin"/>
+        <postStartupActivity implementation="com.example.workshop.plugin.startup.MyProjectActivity" />
+    </extensions>
+
+<!--    <projectListeners>-->
+<!--        <listener-->
+<!--                class="com.example.workshop.plugin.listeners.GradleSyncProjectListener"-->
+<!--                topic="com.intellij.openapi.project.ProjectManagerListener"/>-->
+<!--    </projectListeners>-->
+</idea-plugin>
