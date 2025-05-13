@@ -21,5 +21,5 @@ show("Hello mDevCamp 2025")
 //    See also https://plugins.jetbrains.com/docs/intellij/disposers.html#implementing-the-disposable-interface
 //  - "pluginPath" with an absolute path to this plugin's folder normalised to use "/" as path separator.
 
-show("project: $project")
-show("pluginPath: $pluginPath")
+//show("project: $project")
+//show("pluginPath: $pluginPath")
