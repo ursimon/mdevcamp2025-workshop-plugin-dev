@@ -1,5 +1,3 @@
-import liveplugin.ActionGroupIds
-import liveplugin.registerAction
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -9,21 +7,14 @@ import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.ValidationInfo
 import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.openapi.vfs.VirtualFileManager
-import com.intellij.ui.dsl.builder.BottomGap
-import com.intellij.ui.dsl.builder.TopGap
-import com.intellij.ui.dsl.builder.bind
-import com.intellij.ui.dsl.builder.bindItem
-import com.intellij.ui.dsl.builder.bindSelected
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
-import com.intellij.ui.dsl.builder.toNullableProperty
-import com.intellij.ui.dsl.builder.whenItemSelectedFromUi
+import liveplugin.ActionGroupIds
 import liveplugin.implementation.common.Icons
+import liveplugin.registerAction
 import liveplugin.show
 import liveplugin.virtualFile
 import java.awt.event.ActionEvent
-import java.awt.event.ComponentAdapter
-import java.awt.event.ComponentEvent
 import java.io.File
 import javax.swing.JComponent
 

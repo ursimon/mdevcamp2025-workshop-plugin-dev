@@ -1,4 +1,3 @@
-import com.intellij.openapi.diagnostic.Logger
 import liveplugin.show
 
 // To run a plugin press the "Run plugin" button in the "Plugins" tool window ("alt+C, alt+E" or "ctrl/cmd+shift+L" shortcut).
@@ -24,10 +23,3 @@ show("Hello mDevCamp 2025")
 
 show("project: $project")
 show("pluginPath: $pluginPath")
-
-// Using the "show()" function is often the simplest way to see what's going on in the plugin.
-// However, for large messages it's better to use STDOUT or Logger which will write to "idea.log".
-// You can find "idea.log" location using `Main menu - Help - Show log`
-// or by evaluating com.intellij.openapi.application.PathManager.getLogPath().
-println("Hello world on stdout")
-Logger.getInstance("HelloLogger").info("Hello world")
