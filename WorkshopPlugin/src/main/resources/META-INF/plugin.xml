@@ -1,0 +1,16 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.leopoldpodmolik4llnbcuni.plugintest</id>
+    <name>WorkshopPlugin</name>
+    <vendor>Leopold-podmolik</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <!-- TODO Task 4.2 -->
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.example.workshop.plugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <postStartupActivity implementation="com.example.workshop.plugin.startup.MyProjectActivity" />
+    </extensions>
+</idea-plugin>

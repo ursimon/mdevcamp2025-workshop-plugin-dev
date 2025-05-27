@@ -59,7 +59,7 @@ class MyToolWindowFactory : ToolWindowFactory {
                                     if (index == 0) it.lowercase() else it.capitalize()
                                 }
                             }
-                    }
+                        }
                     println("Selected variant: $selectedVariant")
                     service.getAppModule()?.let { appModule ->
                         BuildVariantUpdater.getInstance(project).updateSelectedBuildVariant(appModule, selectedVariant)
@@ -99,5 +99,6 @@ class MyToolWindowFactory : ToolWindowFactory {
                 tablePanel.add(label)
                 tablePanel.add(comboBox)
             }
-        }}
+        }
+    }
 }
