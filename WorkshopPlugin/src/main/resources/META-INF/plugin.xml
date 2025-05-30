@@ -6,6 +6,8 @@
 
     <depends>com.intellij.modules.platform</depends>
     <!-- TODO Task 4.2 -->
+    <!--depends>com.intellij.modules.androidstudio</depends>
+    <depends>org.jetbrains.android</depends-->
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
