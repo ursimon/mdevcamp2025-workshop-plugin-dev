@@ -4,6 +4,7 @@ import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.SimplePersistentStateComponent
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.service
+import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.observable.properties.GraphProperty
 import com.intellij.openapi.observable.properties.PropertyGraph
 import com.intellij.openapi.project.DumbAware
@@ -17,6 +18,7 @@ import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
 import javax.swing.JPanel
 import com.intellij.openapi.wm.ToolWindowManager
+import liveplugin.show
 import liveplugin.newDisposable
 import liveplugin.registerParent
 import liveplugin.registerProjectOpenListener
@@ -41,13 +43,21 @@ fun loginPanel(model: LoginDataModel) : JPanel {
             indicator.isIndeterminate = true
             val scriptPath = "$pluginPath/scripts/login.sh".toNioPathOrNull()
             if (scriptPath == null || !scriptPath.toFile().exists()) {
-                throw IllegalArgumentException("Script path is invalid or does not exist: $pluginPath/scripts/login.sh")
+                val error = IllegalArgumentException("Script path is invalid or does not exist: $pluginPath/scripts/login.sh")
+                Logger.getInstance("LoginAutomator").info("Script path invalid", error)
+                return@runBackgroundTask
             }
-            runShellCommand(
+            val result = runShellCommand(
                 scriptPath.absolutePathString(),
                 username,
                 password,
             )
+            if (result.exitCode != 0) {
+                show(
+                    message = "Error: ${result.stderr}",
+                    title = "Login script failed with exit code ${result.exitCode}"
+                )
+            }
         }
     }
 
