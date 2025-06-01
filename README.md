@@ -11,11 +11,10 @@ This repo contains samples to work & follow on mDevCamp2025 workshop consisting 
 
 
 # CheatSheet
-- Build Variant Matrix Selector    	      - https://github.com/Nilzor/build-variant-matrix/
-- Live Plugin Development	                - https://dmitrykandalov.com/liveplugin 
-- Standalone Plugin Quickstart	          - https://plugins.jetbrains.com/docs/intellij/plugins-quick-start.html
-- Android Studio Plugin Development﻿	      - https://plugins.jetbrains.com/docs/intellij/android-studio.html
-- Access to Android Studio specific API   - https://plugins.jetbrains.com/docs/intellij/android-plugin-extension-point-list.html
-- IntelliJ Platform Plugin Template       - https://github.com/JetBrains/intellij-platform-plugin-template
-
-
+- [Build Variant Matrix Selector](https://github.com/Nilzor/build-variant-matrix/)
+- [Live Plugin Development](https://dmitrykandalov.com/liveplugin)
+- [Standalone Plugin Quickstart](https://plugins.jetbrains.com/docs/intellij/plugins-quick-start.html)
+- [Android Studio Plugin Development](https://plugins.jetbrains.com/docs/intellij/android-studio.html)
+- [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
+- [Access to Android Studio Specific API](https://plugins.jetbrains.com/docs/intellij/android-plugin-extension-point-list.html)
+- [JetBrains Marketplace](https://plugins.jetbrains.com)
